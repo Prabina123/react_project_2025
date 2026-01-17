@@ -2,13 +2,17 @@
   "name": "react_project_2025",
   "version": "1.0.0",
   "description": "this is react by Prabina",
-  "main": "App.js",
   "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
     "test": "jest"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "parcel": "^2.16.3"
+    "parcel": "^1.12.4"
+  },
+  "dependencies": {
+    "react": "^19.2.3"
   }
-
+}
