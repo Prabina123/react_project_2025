@@ -9,10 +9,11 @@
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "parcel": "^1.12.4"
-  },
   "dependencies": {
-    "react": "^19.2.3"
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
+  },
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3"
   }
 }
