@@ -1,153 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-const heading = (
-  <h1 className="head" tabIndex="5">
-    React using JSX
-  </h1>
-);
-
-const Header = () => {
-  return (
-    <div className="header">
-      <div className="logo-container">
-        <img
-          className="logo"
-          src="https://www.pngfind.com/pngs/m/70-708352_png-image-information-food-and-beverages-logo-transparent.png"
-        />
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li> Home </li>
-          <li>About US</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-      </div>
-    </div>
-  );
-};
+import Header from "./components/Header";
+import Body from "./components/Body";
 
 const StyleCard = {
   background: "#f0f0f0",
 };
-
-// const RestaurantCard = (props) => {
-//   const { resData } = props;
-//   const { name, cuisines, avgRating } = resData?.card?.card?.info;
-//   return (
-//     <div className="res-card" style={StyleCard}>
-//       <img
-//         className="res-logo"
-//         alt="res-logo"
-//         // src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/FOOD_CATALOG/IMAGES/CMS/2025/6/23/716ce46e-3a16-49e0-9144-5e18761b50f2_2367f867-eb7c-4200-9ae3-f93623de0309.jpeg"
-//         src={
-//           "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/" +
-//           resData.card.card.info.cloudinaryImageId
-//         }
-//       />
-//       <h3>{name}</h3>
-//       <h4>{cuisines.join(", ")}</h4>
-//       <h4>{avgRating}</h4>
-//       {/* <h4>{sla.deliveryTime}</h4> */}
-//     </div>
-//   );
-// };
-
-// const resObj = {
-//   "@type": "type.googleapis.com/swiggy.presentation.food.v2.Restaurant",
-//   info: {
-//     id: "347493",
-//     name: "Hudson Chopsticks - Fresh Chinese",
-//     cloudinaryImageId:
-//       "FOOD_CATALOG/IMAGES/CMS/2025/8/8/0508913c-ac40-4560-a524-c1ea1ad45766_7d349ca4-4b41-46c9-b6da-442671289af6.jpg",
-//     locality: "Bhagwan Mahavir Marg",
-//     areaName: "Prashant Vihar",
-//     costForTwo: "₹300 for two",
-//     cuisines: [
-//       "Chinese",
-//       "Thai",
-//       "Asian",
-//       "Snacks",
-//       "Tibetan",
-//       "Nepalese",
-//       "Pan-Asian",
-//       "Seafood",
-//       "Beverages",
-//       "Desserts",
-//     ],
-//     avgRating: 4.3,
-//     parentId: "562449",
-//     avgRatingString: "4.3",
-//     totalRatingsString: "6.8K+",
-//     promoted: true,
-//     adTrackingId:
-//       "cid=c5e71234-6e6b-4046-82e3-bf89e676b2e2~p=7~adgrpid=c5e71234-6e6b-4046-82e3-bf89e676b2e2#ag1~mp=SWIGGY_IN~bl=FOOD~aet=RESTAURANT~aeid=347493~plpr=COLLECTION~eid=70c0e087-c288-46a8-8fdc-1dde1ab0bbd6~srvts=1769017980032~collid=80461",
-//     sla: {
-//       deliveryTime: 29,
-//       lastMileTravel: 3,
-//       serviceability: "SERVICEABLE",
-//       slaString: "25-30 mins",
-//       lastMileTravelString: "3.0 km",
-//       iconType: "ICON_TYPE_EMPTY",
-//     },
-//     availability: {
-//       nextCloseTime: "2026-01-22 00:00:00",
-//       opened: true,
-//     },
-//     badges: {},
-//     isOpen: true,
-//     type: "F",
-//     badgesV2: {
-//       entityBadges: {
-//         textExtendedBadges: {},
-//         textBased: {},
-//         imageBased: {},
-//       },
-//     },
-//     aggregatedDiscountInfoV3: {
-//       header: "60% OFF",
-//       subHeader: "UPTO ₹120",
-//       headerTypeV2: "HEADER_TYPE_V2_TOP_UP",
-//       secondaryDiscountCallout: "₹30 Cashback",
-//       logoCtx: { text: "BENEFITS" },
-//     },
-//     orderabilityCommunication: {
-//       title: {},
-//       subTitle: {},
-//       message: {},
-//       customIcon: {},
-//       commsStyling: {},
-//     },
-//     differentiatedUi: {
-//       displayType: "ADS_UI_DISPLAY_TYPE_ENUM_DEFAULT",
-//       differentiatedUiMediaDetails: {
-//         mediaType: "ADS_MEDIA_ENUM_IMAGE",
-//         lottie: {},
-//         video: {},
-//       },
-//     },
-//     reviewsSummary: {},
-//     displayType: "RESTAURANT_DISPLAY_TYPE_DEFAULT",
-//     restaurantOfferPresentationInfo: {},
-//     externalRatings: {
-//       aggregatedRating: { rating: "--" },
-//     },
-//     ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
-//     campaignId: "c5e71234-6e6b-4046-82e3-bf89e676b2e2",
-//   },
-//   analytics: {},
-//   cta: {
-//     link: "swiggy://menu?restaurant_id=347493&source=collection&query=Momos",
-//     text: "RESTAURANT_MENU",
-//     type: "DEEPLINK",
-//   },
-//   widgetId: "collectionV5RestaurantListWidget_SimRestoRelevance_food",
-//   relevance: {
-//     type: "RELEVANCE_TYPE_ON_MENU_RETURN",
-//     sectionId: "MENU_RETURN_FOOD",
-//   },
-// };
 
 const RestaurantCard = ({ resData }) => {
   const info = resData?.card?.card?.info;
@@ -748,7 +606,7 @@ const resList = [
               rating: "--",
             },
           },
-          ratingsDisplayPreference: "RATINGS_DISPLAY_PREFERENCE_SHOW_SWIGGY",
+          ratingsDisplayPreference: "RATINGS_DISPLAY_PRFHeEFERENCE_SHOW_SWIGGY",
         },
         analytics: {},
         cta: {
@@ -1352,32 +1210,6 @@ const resList = [
   },
 ];
 
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="search">Search</div>
-      {/* <RestaurantCard resData={resList[3]} /> */}
-      <div className="res-container">
-        {/* {resList.map((restaurant) => {
-          const info = restaurant?.card?.card?.info;
-          if (!info) return null; // skip non-restaurant cards
-
-          return <RestaurantCard key={info.id} resData={restaurant} />;
-        })} */}
-
-        {resList.map((restaurant, index) => {
-          const info = restaurant?.card?.card?.info;
-          if (!info) return null;
-
-          return (
-            <RestaurantCard key={`${info.id}-${index}`} resData={restaurant} />
-          );
-        })}
-      </div>
-    </div>
-  );
-};
-
 const AppLayout = () => {
   return (
     <div className="app">
@@ -1388,5 +1220,5 @@ const AppLayout = () => {
 };
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-// root.render(<AppLayout />);
-root.render(heading);
+root.render(<AppLayout />);
+// root.render(heading);
